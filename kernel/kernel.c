@@ -19,7 +19,12 @@ void kernel_main(uint32_t magic, struct multiboot_info *mbi) {
     gdt_init();
     idt_init();
     pic_init();
-    printC("Welcome to HexOS ", COLOR_GREEN); printC(versionOS, COLOR_GREEN); print("\n\n");
-    print(nameUser); print("@"); print(nameOS); print(" ");
+    print("                     #   #  #####  #   #   ###    ####\n");
+    print("                    #   #  #       # #   #   #  #\n");
+    print("                   #####  ####     #    #   #   ###\n");
+    print("                  #   #  #       # #   #   #      #\n");
+    print("                 #   #  #####  #   #   ###   ####\n\n");
+    printC("                       Welcome to HexOS ", COLOR_GREEN); printC(versionOS, COLOR_GREEN); print("\n\n");
+    print(nameUser); print("@"); print(nameOS); print("> ");
     while(1);
 }

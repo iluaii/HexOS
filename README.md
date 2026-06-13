@@ -11,6 +11,10 @@ HexOS boots via GRUB with a Multiboot-compliant kernel and drops you into a mini
 - `ls` — list files in the virtual filesystem
 - `cat <file>` — print file contents
 - `clear` — clear the screen
+- `poweroff` - poweroff of system
+- `reboot` - reboot of system
+- `mem` - output of used RAM
+- `uname` - output of system version
 
 ## How it works
 

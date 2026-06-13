@@ -1,0 +1,18 @@
+     1                                  section .multiboot align=4
+     2 00000000 02B0AD1B                dd 0x1BADB002
+     3 00000004 00000000                dd 0x00
+     4 00000008 FE4F52E4                dd 0xE4524FFE
+     5                                  
+     6                                  section .text
+     7                                  global _start
+     8                                  extern kernel_main
+     9                                  
+    10                                  _start:
+    11 00000000 FA                          cli
+    12 00000001 BC[00200000]                mov esp, stack_space
+    13 00000006 E8(00000000)                call kernel_main
+    14 0000000B F4                          hlt
+    15                                  
+    16                                  section .bss
+    17 00000000 <res 2000h>             resb 8192
+    18                                  stack_space:

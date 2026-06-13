@@ -1,0 +1,5 @@
+build/
+iso/
+my_os.bin
+my_os.iso
+*.o

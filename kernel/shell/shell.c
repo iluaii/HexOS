@@ -1,0 +1,55 @@
+#include "shell.h"
+#include "../../include/string.h"
+#include "../../include/bins.h"
+#include "../../include/vga.h"
+
+#define CMD_COUNT 4
+
+struct file {
+    const char *name;
+    const char *content;
+};
+
+typedef void (*cmd_func)(int argc, char **argv);
+
+struct command {
+    const char *name;
+    cmd_func    func;
+};
+
+static struct command commands[] = {
+    {"help",  help},
+    {"ls", ls},
+    {"cat", cat},
+    {"clear", clear},
+};
+
+static char *args[16];
+static int   argc;
+
+static void parse_args(char *input) {
+    argc = 0;
+    args[argc++] = input;
+
+    for (int i = 0; input[i] != '\0'; i++) {
+        if (input[i] == ' ') {
+            input[i] = '\0';
+            args[argc++] = &input[i + 1];
+        }
+    }
+}
+
+void shell_run(char *input) {
+    parse_args(input);
+
+    for (int i = 0; i < CMD_COUNT; i++) {
+        if (strcmp(args[0], commands[i].name) == 0) {
+            commands[i].func(argc, args);
+            print("root@HexOS> ");
+            return;
+        }
+    }
+
+    print("unknown command\n");
+    print("root@HexOS> ");
+}

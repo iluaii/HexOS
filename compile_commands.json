@@ -1,0 +1,97 @@
+[
+  {
+    "file": "kernel/strlen.c",
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-ffreestanding",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-c",
+      "kernel/strlen.c",
+      "-o",
+      "kernel/strlen.o"
+    ],
+    "directory": "/home/ilu/codprojects/C/govnOS",
+    "output": "kernel/strlen.o"
+  },
+  {
+    "file": "kernel/kernel.c",
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-ffreestanding",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-c",
+      "kernel/kernel.c",
+      "-o",
+      "kernel/kernel.o"
+    ],
+    "directory": "/home/ilu/codprojects/C/govnOS",
+    "output": "kernel/kernel.o"
+  },
+  {
+    "file": "kernel/vga.c",
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-ffreestanding",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-c",
+      "kernel/vga.c",
+      "-o",
+      "kernel/vga.o"
+    ],
+    "directory": "/home/ilu/codprojects/C/govnOS",
+    "output": "kernel/vga.o"
+  },
+  {
+    "file": "kernel/idt.c",
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-ffreestanding",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-c",
+      "kernel/idt.c",
+      "-o",
+      "kernel/idt.o"
+    ],
+    "directory": "/home/ilu/codprojects/C/govnOS",
+    "output": "kernel/idt.o"
+  },
+  {
+    "file": "kernel/gdt.c",
+    "arguments": [
+      "/usr/bin/gcc",
+      "-m32",
+      "-ffreestanding",
+      "-O2",
+      "-Wall",
+      "-Wextra",
+      "-fno-builtin",
+      "-fno-stack-protector",
+      "-c",
+      "kernel/gdt.c",
+      "-o",
+      "kernel/gdt.o"
+    ],
+    "directory": "/home/ilu/codprojects/C/govnOS",
+    "output": "kernel/gdt.o"
+  }
+]

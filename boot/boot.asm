@@ -10,6 +10,8 @@ extern kernel_main
 _start:
     cli
     mov esp, stack_space
+    push ebx
+    push eax
     call kernel_main
     hlt
 

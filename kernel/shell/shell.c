@@ -2,8 +2,9 @@
 #include "../../include/string.h"
 #include "../../include/bins.h"
 #include "../../include/vga.h"
+#include "../../include/globals.h"
 
-#define CMD_COUNT 4
+#define CMD_COUNT 8
 
 struct file {
     const char *name;
@@ -22,6 +23,10 @@ static struct command commands[] = {
     {"ls", ls},
     {"cat", cat},
     {"clear", clear},
+    {"poweroff", poweroff},
+    {"reboot", reboot},
+    {"mem", mem},
+    {"uname", uname},
 };
 
 static char *args[16];
@@ -45,11 +50,11 @@ void shell_run(char *input) {
     for (int i = 0; i < CMD_COUNT; i++) {
         if (strcmp(args[0], commands[i].name) == 0) {
             commands[i].func(argc, args);
-            print("root@HexOS> ");
+            print(nameUser); print("@"); print(nameOS); print(" ");
             return;
         }
     }
 
-    print("unknown command\n");
-    print("root@HexOS> ");
+    printC("unknown command\n", COLOR_RED);
+    print(nameUser); print("@"); print(nameOS); print(" ");
 }

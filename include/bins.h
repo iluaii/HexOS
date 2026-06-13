@@ -8,4 +8,8 @@ void help(int argc, char **argv);
 void ls(int argc, char **argv);
 void cat(int argc, char **argv);
 void clear(int argc, char **argv);
+void reboot(int argc, char **argv);
+void poweroff(int argc, char **argv);
+void mem(int argc, char **argv);
+void uname(int argc, char **argv);
 #endif //CODPROJECTS_BINS_H

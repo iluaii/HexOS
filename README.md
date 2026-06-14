@@ -18,6 +18,7 @@ HexOS boots via GRUB with a Multiboot-compliant kernel and drops you into a mini
 - `echo` - print text
 - `neofetch` - print logo
 - `time` - print the time
+- `whoami` - print your name
 
 ## How it works
 

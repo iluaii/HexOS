@@ -15,4 +15,5 @@ void uname(int argc, char **argv);
 void echo(int argc, char **argv);
 void neofetch(int argc, char **argv);
 void time(int argc, char **argv);
+void whoami(int argc, char **argv);
 #endif //CODPROJECTS_BINS_H

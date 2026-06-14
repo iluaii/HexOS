@@ -2,6 +2,9 @@
 
 #ifndef CODPROJECTS_GLOBALS_H
 #define CODPROJECTS_GLOBALS_H
+
+#define TIME_UTC 3
+
 extern char nameOS[32];
 extern char nameUser[64];
 extern char versionOS[64];
@@ -11,4 +14,5 @@ struct multiboot_info {
     uint32_t mem_lower;
     uint32_t mem_upper;
 };
+void printPromptLine(void);
 #endif //CODPROJECTS_GLOBALS_H

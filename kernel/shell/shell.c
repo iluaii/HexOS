@@ -4,7 +4,7 @@
 #include "../../include/vga.h"
 #include "../../include/globals.h"
 
-#define CMD_COUNT 10
+#define CMD_COUNT 11
 
 struct file {
     const char *name;
@@ -29,6 +29,7 @@ static struct command commands[] = {
     {"uname", uname},
     {"echo", echo},
     {"neofetch", neofetch},
+    {"time", time},
 };
 
 static char *args[16];
@@ -52,11 +53,11 @@ void shell_run(char *input) {
     for (int i = 0; i < CMD_COUNT; i++) {
         if (strcmp(args[0], commands[i].name) == 0) {
             commands[i].func(argc, args);
-            print(nameUser); print("@"); print(nameOS); print("> ");
+            printPromptLine();
             return;
         }
     }
 
     printC("unknown command\n", COLOR_RED);
-    print(nameUser); print("@"); print(nameOS); print("> ");
+    printPromptLine();
 }

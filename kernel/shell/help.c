@@ -10,4 +10,5 @@ void help(int argc, char **argv) {
     print("uname - output of system version\n");
     print("echo - print text\n");
     print("neofetch - print logo\n");
+    print("time - print the time\n");
 }

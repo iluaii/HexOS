@@ -25,6 +25,6 @@ void kernel_main(uint32_t magic, struct multiboot_info *mbi) {
     print("                  #   #  #       # #   #   #      #\n");
     print("                 #   #  #####  #   #   ###   ####\n\n");
     printC("                       Welcome to HexOS ", COLOR_GREEN); printC(versionOS, COLOR_GREEN); print("\n\n");
-    print(nameUser); print("@"); print(nameOS); print("> ");
+    printPromptLine();
     while(1);
 }

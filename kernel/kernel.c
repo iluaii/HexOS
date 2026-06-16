@@ -3,9 +3,9 @@
 #include "../include/gdt.h"
 #include "../include/idt.h"
 #include "../include/pic.h"
-#include <stdint.h>
+//#include <stdint.h>
 
-#include "../../../../../../usr/include/ncurses.h"
+//#include "../../../../../../usr/include/ncurses.h"
 
 
 struct multiboot_info *g_mbi;

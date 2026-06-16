@@ -11,5 +11,6 @@ void help(int argc, char **argv) {
     print("echo - print text\n");
     print("neofetch - print logo\n");
     print("time - print the time\n");
-    print("whoami - print your name");
+    print("whoami - print your name\n");
+    print("rand - print random number generator\n");
 }

@@ -4,7 +4,7 @@
 #include "../../include/vga.h"
 #include "../../include/globals.h"
 
-#define CMD_COUNT 12
+#define CMD_COUNT 13
 
 struct file {
     const char *name;
@@ -31,6 +31,7 @@ static struct command commands[] = {
     {"neofetch", neofetch},
     {"time", time},
     {"whoami", whoami},
+    {"rand", rand},
 };
 
 static char *args[16];
